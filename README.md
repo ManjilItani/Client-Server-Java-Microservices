@@ -1,6 +1,6 @@
 # Microservices
 
-## Built Cline/Server Microservices including fllowing
+## Built Cline/Server Microservices in one windows application including fllowing:
 * GPA Calculator
 * Tic-Tac-Toe
 * Alphabet sort/fiter/find
