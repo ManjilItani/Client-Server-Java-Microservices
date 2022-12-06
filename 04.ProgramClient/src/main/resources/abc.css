@@ -1,0 +1,30 @@
+.lblTitle{
+	-fx-font-size: 17pt;
+    -fx-alignment: center ;
+}
+.numbers {
+   -fx-font-size: 8pt;
+	-fx-border-color:black;
+	-fx-padding: 5 5 5 5 ;
+	-fx-min-width: 30;
+	-fx-min-height: 25;
+}
+.abc {
+    -fx-font-size: 16pt;
+ 	-fx-border-color:black;
+ 	-fx-padding: 10 10 10 10;
+ 	-fx-min-width: 55;
+ 	-fx-min-height: 55;
+ }
+
+
+.grid {
+
+    -fx-hgap: 8;
+    -fx-vgap: 8;
+}
+
+.highlight {
+
+    -fx-background-color: pink;
+}

@@ -1,0 +1,11 @@
+
+#tcPercentage, #tcNetIncome, #tcCost{
+    -fx-alignment: center-right ;
+
+}
+
+#tcId, #tcState{
+
+-fx-alignment: center ;
+}
+

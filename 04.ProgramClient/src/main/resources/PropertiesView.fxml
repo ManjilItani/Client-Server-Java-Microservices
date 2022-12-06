@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import edu.citytech.retirement.NumberFormatCell?>
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="749.0" stylesheets="@retirement.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citytech.properties.PropertiesController">
+   <children>
+       <MenuBar layoutX="7.0" layoutY="4.0" prefHeight="33.0" prefWidth="164.0">
+           <menus>
+               <Menu mnemonicParsing="false" text="Display Mode">
+                   <items>
+                       <MenuItem mnemonicParsing="false" onAction="#tictactoeMode" text="TicTacToe" />
+                       <MenuItem mnemonicParsing="false" onAction="#abcCounterMode" text="ABC Counter" />
+                       <MenuItem mnemonicParsing="false" onAction="#growthRateMode" text="Growth Rate" />
+                       <MenuItem mnemonicParsing="false" onAction="#retirementMode" text="Retirement" />
+                       <MenuItem mnemonicParsing="false" onAction="#propertiesMode" text="Properties" />
+                       <MenuItem mnemonicParsing="false" onAction="#pieChartMode" text="PieChart" />
+                   </items>
+               </Menu>
+           </menus>
+       </MenuBar>
+      <Label contentDisplay="CENTER" layoutX="284.0" layoutY="67.0" prefHeight="35.0" prefWidth="138.0" text="Properties" textAlignment="RIGHT">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TableView fx:id="tvProperties" layoutX="25.0" layoutY="143.0" prefHeight="464.0" prefWidth="689.0">
+        <columns>
+          <TableColumn fx:id="tcId" prefWidth="100.0" text="Property ID">
+              <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="tcCost" prefWidth="103.0" text="Cost">
+              <cellFactory>
+                  <NumberFormatCell>
+                      <format>$##,###.00</format>
+                  </NumberFormatCell>
+              </cellFactory>
+              <cellValueFactory>
+                  <PropertyValueFactory property="investmentCost" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="tcGrossIncome" prefWidth="133.0" text="Gross Income">
+                <cellFactory>
+                    <NumberFormatCell>
+
+                        <format>$##,###.00</format>
+
+                    </NumberFormatCell>
+                </cellFactory>
+                <cellValueFactory>
+                    <PropertyValueFactory property="grossIncome" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcExpenses" prefWidth="117.0" text="Expenses">
+                <cellFactory>
+                    <NumberFormatCell>
+
+                        <format>$##,###.00</format>
+
+                    </NumberFormatCell>
+                </cellFactory>
+                <cellValueFactory>
+                    <PropertyValueFactory property="expense" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcNetIncome" prefWidth="115.0" text="Net Income">
+                <cellFactory>
+                    <NumberFormatCell>
+
+                        <format>$##,###.00</format>
+
+                    </NumberFormatCell>
+                </cellFactory>
+                <cellValueFactory>
+                    <PropertyValueFactory property="netIncome" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcOccupancy" prefWidth="87.0" text="Occupancy">
+                <cellFactory>
+                    <NumberFormatCell>
+
+                        <format>$##,###.00</format>
+
+                    </NumberFormatCell>
+                </cellFactory>
+               <cellValueFactory>
+                  <PropertyValueFactory property="occupancy" />
+               </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label layoutX="18.0" layoutY="645.0" prefHeight="21.0" prefWidth="102.0" text="Manjil Itani">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,6 @@
+#tvRetirement .table-column{
+    -fx-alignment: center ;
+}
+#tvProperties .table-column{
+    -fx-alignment: center-right ;
+}
